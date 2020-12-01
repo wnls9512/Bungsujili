@@ -10,7 +10,6 @@
 
 <div id="container" class="text-center">
 
-안녕~~
 	
 </div>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
