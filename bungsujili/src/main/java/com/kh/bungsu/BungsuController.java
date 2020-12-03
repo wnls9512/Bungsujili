@@ -12,10 +12,9 @@ public class BungsuController {
 
 	//루트로 들어온 요청
 	@GetMapping("/")
-	public String home() {
-		
-		// /WEB-INF/views/home.jsp
-		return "home";
+	public String home() {		
+		// /WEB-INF/views/index.jsp
+		return "index";
 	}
 	
 }
