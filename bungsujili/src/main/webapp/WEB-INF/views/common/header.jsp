@@ -27,22 +27,37 @@
 <div id="container">
 <!--------------------- header 시작 ------------------------->
 	<header>
-		<div id="header-container">
-			<h2>${ param.pageTitle }</h2>
-		</div>
-		<!-- https://getbootstrap.com/docs/4.0/components/navbar/ -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand" href="#">
-				<img src="${pageContext.request.contextPath }/resources/images/logo-spring.png" alt="스프링로고" width="50px" />
+				<img src="${pageContext.request.contextPath }/resources/img/logo/팥붕어빵.png" alt="로고" width="50px" />
 			</a>
+			<!-- 반응형 메뉴 아이콘 시작-->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 		  	</button>
+			<!-- 반응형 메뉴 아이콘 끝-->
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav mr-auto">
 			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}">Home</a></li>
+			    	<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Menu
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="#">가까운 음식점 찾기</a>
+				          <a class="dropdown-item" href="#">가게 등록하기</a>
+				          <a class="dropdown-item" href="#">가게 제보하기</a>
+				        </div>
+				    </li>
+			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/member/login">Login</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}">MyPage</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}">Admin</a></li>
 			    </ul>
 			 </div>
+			 <form class="form-inline my-2 my-lg-0">
+		      <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		    </form>
 		</nav>
 	</header>
 	<section id="content">
