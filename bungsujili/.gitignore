@@ -202,3 +202,5 @@ $RECYCLE.BIN/
 
 .classpath
 .project
+
+jdbc.properties
