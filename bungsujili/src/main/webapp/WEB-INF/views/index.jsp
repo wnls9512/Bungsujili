@@ -4,26 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<jsp:include page="/WEB-INF/views/common/header.jsp">
-	<jsp:param value="index" name="pageTitle"/>
-</jsp:include>
-
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.min.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/fontAwesome.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/hero-slider.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/owl-carousel.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/datepicker.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/templatemo-style.css">
-
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
-        <script src="${pageContext.request.contextPath }/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
+<jsp:include page="/WEB-INF/views/common/header2.jsp" />
 
     <section class="banner" id="top">
         <div class="container-fluid">
@@ -46,7 +27,7 @@
                         <h2>Avalon</h2>
                         <span>Creative <em>HTML</em> Template</span>
                         <div class="line-dec"></div>
-                        <p>“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et sem blandit, rhoncus ante a, varius libero. Cras elementum tincidunt ullamcorper. Sed vehic ula dictum tortor ut aliquet. ”</p>
+                        <p>â Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et sem blandit, rhoncus ante a, varius libero. Cras elementum tincidunt ullamcorper. Sed vehic ula dictum tortor ut aliquet. â</p>
                         <ul class="social-icons">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -66,7 +47,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="best-offer-left-content">
-                        <div class="icon"><img src="${pageContext.request.contextPath }/resources/img/best-offer-icon.png" alt=""></div>
+                        <div class="icon"><img src="${ pageContext.request.contextPath }/resources/img/best-offer-icon.png" alt=""></div>
                         <h4>Best Offer For You</h4>
                     </div>
                 </div>
@@ -399,43 +380,5 @@
                 </div>
             </div>
         </div>
-        
-<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
-
-<script type="text/javascript">
-   $(document).ready(function() 
-{
-       // navigation click actions 
-       $('.scroll-link').on('click', function(event){
-           event.preventDefault();
-           var sectionID = $(this).attr("data-id");
-           scrollToID('#' + sectionID, 750);
-       });
-       // scroll to top action
-       $('.scroll-top').on('click', function(event) {
-           event.preventDefault();
-           $('html, body').animate({scrollTop:0}, 'slow');         
-       });
-       // mobile nav toggle
-       $('#nav-toggle').on('click', function (event) {
-           event.preventDefault();
-           $('#main-nav').toggleClass("open");
-       });
-   });
-   // scroll function
-   function scrollToID(id, speed){
-       var offSet = 0;
-       var targetOffset = $(id).offset().top - offSet;
-       var mainNav = $('#main-nav');
-       $('html,body').animate({scrollTop:targetOffset}, speed);
-       if (mainNav.hasClass("open")) {
-           mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-           mainNav.removeClass("open");
-       }
-   }
-   if (typeof console === "undefined") {
-       console = {
-           log: function() { }
-       };
-   }
-</script>
+    </section>
+<jsp:include page="/WEB-INF/views/common/footer2.jsp" />

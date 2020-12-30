@@ -10,6 +10,7 @@ public class BungsujiliApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BungsujiliApplication.class, args);
+		
 	}
 
 }
