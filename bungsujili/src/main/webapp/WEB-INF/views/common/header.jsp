@@ -27,86 +27,42 @@
 <!-- 사용자작성 css -->
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/style.css" />
 
-<script>
-<%-- RedirectAttribute에 등록된 msg값 존재 여부 확인 후 출력 --%>
-<c:if test="${not empty msg }">
-	alert('${ msg }');
-</c:if>
-</script>
-
 </head>
 <body>
 <div id="container">
 <!--------------------- header 시작 ------------------------->
 	<header>
-		<div id="header-container">
-			<h2>${ param.pageTitle }</h2>
-		</div>
-		<!-- https://getbootstrap.com/docs/4.0/components/navbar/ -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand" href="#">
-				<img src="${pageContext.request.contextPath }/resources/images/logo-spring.png" alt="스프링로고" width="50px" />
+				<img src="${pageContext.request.contextPath }/resources/img/logo/팥붕어빵.png" alt="로고" width="50px" />
 			</a>
+			<!-- 반응형 메뉴 아이콘 시작-->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 		  	</button>
+			<!-- 반응형 메뉴 아이콘 끝-->
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav mr-auto">
 			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}">Home</a></li>
-			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/memo/memo.do">메모 AOP</a></li>
-                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/board/boardList.do">게시판</a></li>
-                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/menu/menu.do">메뉴 REST</a></li>
-                    <!-- 데모메뉴 DropDown -->
-                    <!--https://getbootstrap.com/docs/4.1/components/navbar/#supported-content-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Demo
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="${pageContext.request.contextPath}/demo/devForm.do">Dev 등록</a>
-                            <a class="dropdown-item" href="${pageContext.request.contextPath}/demo/devList.do">Dev 목록</a>
-                        </div>
+			    	<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Menu
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="#">가까운 음식점 찾기</a>
+				          <a class="dropdown-item" href="#">가게 등록하기</a>
+				          <a class="dropdown-item" href="#">가게 제보하기</a>
+				        </div>
 				    </li>
+			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/member/login">Login</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}">MyPage</a></li>
+			    	<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}">Admin</a></li>
 			    </ul>
-			    <!-- security 관련 -->
-			    <sec:authorize access="isAnonymous()"> <!-- 익명일때 (로그인하지 않은 상태) -->
-				    <button class="btn btn-outline-success my-2 my-sm-0" type="button" 
-				    		onclick="location.href='${ pageContext.request.contextPath }/member/memberLoginForm.do';">로그인</button>
-	                &nbsp;
-	                <button class="btn btn-outline-success my-2 my-sm-0" type="button"
-	                		onclick="location.href='${ pageContext.request.contextPath }/member/memberEnroll.do';">회원가입</button>
-			    </sec:authorize>
-			    <sec:authorize access="isAuthenticated()"> <!-- 인증되었는가 -->
-			    	<a href="${pageContext.request.contextPath }/member/memberDetail.do">
-						<!-- 인증된 정보에 접근하기 위한 태그 -->
-			    		<sec:authentication property="principal.username"/>
-				    	<sec:authentication property="principal.authorities"/> 
-			    	</a>님, 안녕하세요 😇   
-			    	<form:form
-			    		class="d-inline"
-			    		method="POST"
-			    		action="${ pageContext.request.contextPath }/member/memberLogout.do">
-			    	 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">로그아웃</button>
-			    		</form:form>
-			    </sec:authorize>
-			    
-			    <%-- <c:if test="${empty loginMember }">
-				    <button class="btn btn-outline-success my-2 my-sm-0" type="button" 
-				    		onclick="location.href='${ pageContext.request.contextPath }/member/memberLoginForm.do';">로그인</button>
-	                &nbsp;
-	                <button class="btn btn-outline-success my-2 my-sm-0" type="button"
-	                		onclick="location.href='${ pageContext.request.contextPath }/member/memberEnroll.do';">회원가입</button>
-			    </c:if>
-			    <c:if test="${not empty loginMember }">
-			    	<a href="${pageContext.request.contextPath }/member/memberDetail.do">${loginMember.name }</a>님, 안녕하세요 😇   
-			    	 <button class="btn btn-outline-success my-2 my-sm-0" type="button"
-	                		onclick="location.href='${ pageContext.request.contextPath }/member/memberLogout.do';">로그아웃</button>
-			    </c:if> --%>
 			 </div>
+			 <form class="form-inline my-2 my-lg-0">
+		      <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		    </form>
 		</nav>
 	</header>
 	<section id="content">
-	
-<script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.5/sockjs.min.js"></script>	
-<script>
