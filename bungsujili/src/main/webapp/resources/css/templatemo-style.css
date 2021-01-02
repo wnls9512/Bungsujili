@@ -103,6 +103,13 @@ p {
 	line-height: 70px;
 }
 
+.left-banner-content h2 {
+	font-size: 45px;
+	font-weight: 300;
+	color: #fff;
+	line-height: 55px;
+}
+
 .left-banner-content .line-dec {
 	width: 60px;
 	height: 3px;

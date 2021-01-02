@@ -14,7 +14,10 @@
                         <div class="text-content">
                             <h6>There you go</h6>
                             <div class="line-dec"></div>
-                            <h1>Clean &amp; Minimal <br>Template</h1>
+                            <div>
+	                            <h2>붕어빵이 있는 그곳을 찾아,</h2>
+	                            <h1>붕수지리</h1>
+                            </div>
                             <div class="white-border-button">
                                 <a href="#" class="scroll-link" data-id="best-offer-section">Discover More</a>
                             </div>
@@ -23,7 +26,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="right-banner-content">
-                        <div class="logo"><a href="index.html"><img src="${pageContext.request.contextPath }/resources/img/logo.png" alt=""></a></div>
+                        <div class="logo"><a href="#"><img src="${pageContext.request.contextPath }/resources/img/logo.png" alt=""></a></div>
                         <h2>Avalon</h2>
                         <span>Creative <em>HTML</em> Template</span>
                         <div class="line-dec"></div>

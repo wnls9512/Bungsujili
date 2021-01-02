@@ -12,7 +12,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Avalon HTML Template</title>
+        <title>붕수지리</title>
 <!-- 
 Avalon Template 
 https://templatemo.com/tm-513-avalon
@@ -21,21 +21,75 @@ https://templatemo.com/tm-513-avalon
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap2.min.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/fontAwesome.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/hero-slider.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/owl-carousel.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/datepicker.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/templatemo-style.css">
-
+        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap2.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap2.css">
+		
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
         <script src="${pageContext.request.contextPath }/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
+    </head>
+	<style>
+		.link-unstyled {
+			color: gray;
+			text-decoration:none;
+		}
+		.link-unstyled:hover {
+			color: black;
+		}
+		
+	</style>
 <body>
 
 	<section class="header" id="top_top">
-		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style="z-index:1;">
+		  <div class="container-fluid">
+		    <a class="navbar-brand fs-1" href="#">Navbar</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active fs-3" aria-current="page" href="#">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link fs-3" href="#">Link</a>
+		        </li>
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle fs-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Dropdown
+		          </a>
+		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item fs-3" href="#">Action</a></li>
+		            <li><a class="dropdown-item fs-3" href="#">Another action</a></li>
+		            <li><hr class="dropdown-divider"></li>
+		            <li><a class="dropdown-item fs-3" href="#">Something else here</a></li>
+		          </ul>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link disabled fs-3" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+		        </li>
+		      </ul>
+		      <div class="fs-4">
+				  <a class="p-2 link-unstyled" href="#">회원가입</a>
+				  <a class="p-2 link-unstyled" href="#">로그인</a>
+				  <a class="p-2 link-unstyled" href="#">마이페이지</a>
+			  </div>
+			  &nbsp; &nbsp; &nbsp;
+		      <form class="d-flex">
+		        <input class="form-control me-2 fs-3" type="search" placeholder="Search" aria-label="Search">
+		        <button class="btn btn-outline-success fs-3" type="submit">Search</button>
+		      </form>
+		    </div>
+		  </div>
+		</nav>
 	</section>
