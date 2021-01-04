@@ -13,7 +13,7 @@ public class BungsuController {
 	@RequestMapping(value="/")
 	public String home() {
 		
-		// /WEB-INF/view/home.jsp
+		// /WEB-INF/views/index.jsp
 		return "/index";
 	}
 	

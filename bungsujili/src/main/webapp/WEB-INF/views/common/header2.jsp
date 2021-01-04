@@ -20,6 +20,10 @@ https://templatemo.com/tm-513-avalon
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="${pageContext.request.contextPath }/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap2.min.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap-theme.min.css">
@@ -33,10 +37,6 @@ https://templatemo.com/tm-513-avalon
 		
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
-        <script src="${pageContext.request.contextPath }/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-    </head>
 	<style>
 		.link-unstyled {
 			color: gray;
@@ -47,6 +47,7 @@ https://templatemo.com/tm-513-avalon
 		}
 		
 	</style>
+    </head>
 <body>
 
 	<section class="header" id="top_top">
@@ -80,7 +81,7 @@ https://templatemo.com/tm-513-avalon
 		        </li>
 		      </ul>
 		      <div class="fs-4">
-				  <a class="p-2 link-unstyled" href="#">회원가입</a>
+				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/join">회원가입</a>
 				  <a class="p-2 link-unstyled" href="#">로그인</a>
 				  <a class="p-2 link-unstyled" href="#">마이페이지</a>
 			  </div>
@@ -92,4 +93,9 @@ https://templatemo.com/tm-513-avalon
 		    </div>
 		  </div>
 		</nav>
+		
+		
+
+		
 	</section>
+	
