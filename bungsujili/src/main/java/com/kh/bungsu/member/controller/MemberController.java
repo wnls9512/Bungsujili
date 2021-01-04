@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.kh.bungsu.member.model.service.MemberService;
 
 import lombok.extern.slf4j.Slf4j;
 
-//@RestController
 @Controller
-@RequestMapping("/member")
+//@RequestMapping("/member")
 @Slf4j
 public class MemberController {
 
@@ -22,5 +22,10 @@ public class MemberController {
 	public String login() {
 		
 		return "member/loginForm";
+	}
+	
+	@RequestMapping("/join")
+	public String join() {
+		return "member/joinForm";
 	}
 }
