@@ -81,7 +81,7 @@ https://templatemo.com/tm-513-avalon
 		        </li>
 		      </ul>
 		      <div class="fs-4">
-				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/join">회원가입</a>
+				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/member/join">회원가입</a>
 				  <a class="p-2 link-unstyled" href="#">로그인</a>
 				  <a class="p-2 link-unstyled" href="#">마이페이지</a>
 			  </div>

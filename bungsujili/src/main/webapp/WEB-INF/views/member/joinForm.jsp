@@ -54,7 +54,7 @@ $(function(){
 <style>
 /*중복아이디체크관련*/
 div#memberId-container{position:relative; padding:0px;}
-div#memberId-container span.guide {display:none;font-size: 12px;position:absolute; top:12px; right:10px;}
+div#memberId-container span.guide {display:none; font-size: 12px;position:absolute; top:12px; right:10px;}
 div#memberId-container span.ok{color:green; font-weight:bold;}
 div#memberId-container span.error{color:red; font-weight:bold;}
 </style>
@@ -75,7 +75,7 @@ div#memberId-container span.error{color:red; font-weight:bold;}
 							
 				<!-- _csrf인증 토큰 발행 -->
 				<!-- security 관련 -->	      
-					<form:form id="memberEnrollFrm" action="${pageContext.request.contextPath }/member/memberEnroll.do" method="POST">
+					<form:form id="memberJoinFrm" action="${pageContext.request.contextPath }/member/joinMember" method="POST">
 					<div class="mx-auto w-75 my-3">
 						<div class="form-group">
 							 <div class="custom-control custom-radio form-check form-check-inline p-0">
@@ -105,23 +105,19 @@ div#memberId-container span.error{color:red; font-weight:bold;}
 						</div>
 						
 						<div class="form-group">
-						  <label class="col-form-label" for="name">이름</label>
-						  <input type="text" class="form-control" id="name" name="name" required>
+						  <label class="col-form-label" for="nickname">닉네임</label>
+						  <input type="text" class="form-control" id="nickname" name="nickname" required>
 						</div>
 						<div class="form-group">
 						  <label class="col-form-label" for="phone">전화번호</label>
 						  <input type="tel" class="form-control" id="phone" name="phone" required>
 						</div>
 						<div class="form-group">
-							<label for="sample4_datailAddress">주소</label>
-							<div class="align-middle">
-								<input class="form-control d-inline-block" style="width:40%;" type="text" id="sample4_postcode" name="postCode" placeholder="우편번호" readonly>
-								<input type="button" class="d-inline-block mx-3 btn btn-outline-primary" style="width:40%;" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-							</div>
-							<input class="form-control my-1" type="text" id="sample4_roadAddress" name="addr" placeholder="도로명주소" readonly>
-							<span id="guide" style="color:#999;display:none"></span>
-							<input class="form-control" type="text" id="sample4_detailAddress" name="addrDetail" placeholder="상세주소">
+						  <label class="col-form-label" for="businessNo">사업자번호</label>
+						  <input type="text" class="form-control" id="businessNo" name="businessNo" disabled>
 						</div>
+						
+				
 						<div class="text-center my-4">
 							<div class="d-inline-block" style="width:80px;">
 								<input type="button" class="btn btn-secondary" value="취소"/>
@@ -149,7 +145,7 @@ $("#memberId").keyup(function(){
 	}
 	
 	$.ajax({
-		url : "${ pageContext.request.contextPath }/member/checkIdDuplicate1.do",
+		url : "${ pageContext.request.contextPath }/member/checkIdDuplicate.do",
 		data :	{
 				memberId : $(this).val()
 			},
@@ -200,15 +196,16 @@ $("#memberJoinFrm").submit(function(){
 		return false;
 	}
 
-	var $address = $("#sample4_postcode");
-	if($address.val().trim().length == 0){
-		alert("주소를 입력해주세요.");
-		return false;
-	}
-
 	return true;
 });
 
+$('#authority2').on('click', function() {
+	$('#businessNo').attr('disabled', false);
+});
+$('#authority1').on('click', function() {
+	$('#businessNo').val('');
+	$('#businessNo').attr('disabled', true);
+});
 
 </script>
 
