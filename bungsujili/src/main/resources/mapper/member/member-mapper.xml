@@ -3,4 +3,36 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
+
+<select id="selectOneMember" resultType="String">
+	select
+		member_id
+	from
+		member
+	where
+		member_id = #{ memberId }
+</select>
+
+<insert id="joinMember">
+	insert into member 
+	values(
+		#{ memberId },
+		#{ password },
+		#{ nickname },
+		#{ phone },
+		default,
+		#{ businessNo },
+		default
+	)
+</insert>
+
+<insert id="joinMemberAuth">
+	insert into auth
+		values(
+			#{ memberId },
+			#{ authority }
+		)
+		
+</insert>
+
 </mapper>
