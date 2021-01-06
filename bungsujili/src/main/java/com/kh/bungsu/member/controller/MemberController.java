@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.kh.bungsu.member.model.service.MemberService;
 import com.kh.bungsu.member.model.vo.Auth;
@@ -55,10 +56,10 @@ public class MemberController {
 		return map;
 	}
 	
-	@PostMapping("/memberJoin")
-	public ModelAndView memberJoin(ModelAndView mav, 
-								   Member member,
-								   Auth auth) {
+	@PostMapping("/joinMember")
+	public String memberJoin(RedirectAttributes redirectAttr, 
+							 Member member,
+							 Auth auth) {
 
 		System.out.println("member="+member);
 		System.out.println("authority="+auth);
@@ -67,14 +68,12 @@ public class MemberController {
 		int result2 = memberService.joinMemberAuth(auth);
 		
 		if(result>0 && result2>0) {
-			mav.addObject("msg", "정상적으로 가입되었습니다.");
+			redirectAttr.addFlashAttribute("msg", "정상적으로 가입되었습니다.");
 		} else {
-			mav.addObject("msg", "가입에 실패하였습니다.");
+			redirectAttr.addFlashAttribute("msg", "가입에 실패하였습니다.");
 		}
 		
-		mav.setViewName("index");
-		
-		return mav;
+		return "redirect:/";
 	}
-	
+
 }

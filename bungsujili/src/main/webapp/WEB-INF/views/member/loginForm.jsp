@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<jsp:include page="/WEB-INF/views/common/header.jsp">
+<jsp:include page="/WEB-INF/views/common/header2.jsp">
 	<jsp:param value="index" name="pageTitle"/>
 </jsp:include>
 
@@ -63,7 +63,6 @@
 	                                  <a href="#" class="scroll-link" data-id="events-section">join</a>
 	                              </div>
 								</form>
-                                
                             </div>
                             <div class="col-md-6 col-sm-12">
                                 <%-- <img src="${pageContext.request.contextPath }/resources/img/best-offer-image.png" alt=""> --%>

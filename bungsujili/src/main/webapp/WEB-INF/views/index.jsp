@@ -97,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-10 col-sm-12 col-md-offset-1">
+                    <div class="col-md-10 col-sm-12 col-md-offset-1 mx-auto">
                         <div class="projects-holder">
                             <div class="event-list">
                                 <ul>
