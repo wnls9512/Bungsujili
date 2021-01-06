@@ -53,36 +53,31 @@ https://templatemo.com/tm-513-avalon
 	<section class="header" id="top_top">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style="z-index:1;">
 		  <div class="container-fluid">
-		    <a class="navbar-brand fs-1" href="#">Navbar</a>
+		    <a class="navbar-brand fs-1" href="#">
+				<img src="${pageContext.request.contextPath }/resources/img/logo/팥붕어빵.png" alt="로고" width="50px" />
+			</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		        <li class="nav-item">
-		          <a class="nav-link active fs-3" aria-current="page" href="#">Home</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link fs-3" href="#">Link</a>
+		          <a class="nav-link active fs-3" aria-current="page" href="${pageContext.request.contextPath}">Home</a>
 		        </li>
 		        <li class="nav-item dropdown">
 		          <a class="nav-link dropdown-toggle fs-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-		            Dropdown
+		            Menu
 		          </a>
 		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-		            <li><a class="dropdown-item fs-3" href="#">Action</a></li>
-		            <li><a class="dropdown-item fs-3" href="#">Another action</a></li>
-		            <li><hr class="dropdown-divider"></li>
-		            <li><a class="dropdown-item fs-3" href="#">Something else here</a></li>
+		            <li><a class="dropdown-item fs-3" href="#">가까운 음식점 찾기</a></li>
+		            <li><a class="dropdown-item fs-3" href="#">가게 등록하기</a></li>
+		            <li><a class="dropdown-item fs-3" href="#">가게 제보하기</a></li>
 		          </ul>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link disabled fs-3" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 		        </li>
 		      </ul>
 		      <div class="fs-4">
 				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/member/join">회원가입</a>
-				  <a class="p-2 link-unstyled" href="#">로그인</a>
+				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/member/login">로그인</a>
 				  <a class="p-2 link-unstyled" href="#">마이페이지</a>
 			  </div>
 			  &nbsp; &nbsp; &nbsp;
