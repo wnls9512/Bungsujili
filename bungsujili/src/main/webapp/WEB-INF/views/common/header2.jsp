@@ -25,8 +25,6 @@ https://templatemo.com/tm-513-avalon
         <script src="${pageContext.request.contextPath }/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap2.min.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/fontAwesome.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/hero-slider.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/owl-carousel.css">
@@ -36,7 +34,9 @@ https://templatemo.com/tm-513-avalon
         <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap2.css">
 		
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
+	
+		<script src="${pageContext.request.contextPath }/resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		
 	<style>
 		.link-unstyled {
 			color: gray;
@@ -45,7 +45,17 @@ https://templatemo.com/tm-513-avalon
 		.link-unstyled:hover {
 			color: black;
 		}
-		
+		@font-face {
+		     font-family: 'S-CoreDream-3Light';
+		     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+		     font-weight: normal;
+		     font-style: normal;
+		}
+		            
+		*{
+			font-family: 'S-CoreDream-3Light' !important;
+			font-size: 17px;
+		}
 	</style>
     </head>
 <body>
@@ -70,7 +80,7 @@ https://templatemo.com/tm-513-avalon
 		          </a>
 		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 		            <li><a class="dropdown-item fs-3" href="#">가까운 음식점 찾기</a></li>
-		            <li><a class="dropdown-item fs-3" href="#">가게 등록하기</a></li>
+		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/member/registerShop">가게 등록하기</a></li>
 		            <li><a class="dropdown-item fs-3" href="#">가게 제보하기</a></li>
 		          </ul>
 		        </li>

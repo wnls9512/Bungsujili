@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.kh.bungsu.member.model.service.MemberService;
@@ -39,7 +38,12 @@ public class MemberController {
 	
 	@RequestMapping("/join")
 	public String join() {
-		return "member/joinForm";
+		return "member/joinForm2";
+	}
+	
+	@RequestMapping("/registerShop")
+	public String registerShop() {
+		return "member/shopRegistrationForm";
 	}
 	
 	@GetMapping("/checkIdDuplicate.do")

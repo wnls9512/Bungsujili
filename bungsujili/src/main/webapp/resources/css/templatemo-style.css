@@ -209,7 +209,7 @@ p {
 }
 
 .best-offer-left-content {
-	min-height: 550px;
+/* 	min-height: 550px; */
 	height: 550px;
 	padding-top: 175px;
 	padding-bottom: 175px;
@@ -242,7 +242,7 @@ p {
 .best-offer-right-content {
 	background-color: #eee;
 	padding: 80px 40px;
-	min-height: 550px;
+/* 	min-height: 550px; */
 	height: 550px;
 }
 
@@ -252,6 +252,12 @@ p {
 	font-weight: 300;
 	color: #121212;
 	line-height: 36px;
+}
+
+.best-offer-right-content h4 {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: black;
 }
 
 .best-offer-right-content em {
