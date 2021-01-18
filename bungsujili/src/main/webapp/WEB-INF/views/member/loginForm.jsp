@@ -27,16 +27,17 @@
                             <div class="">
                                 <h2><em>로그인</em></h2>
                                 
-                                <form>
+                                <form action="${pageContext.request.contextPath }/member/login"
+                                	  method="POST">
                                 	<div class="form-row">
 								    <div class="form-group col-md-5">
 								      <label for="inputEmail4"><h4>아이디</h4></label>
-								      <input type="text" class="form-control" id="memberId" placeholder="ID">
+								      <input type="text" class="form-control" id="memberId" name="memberId" placeholder="ID">
 								    <small id="idHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 								    </div>
 								    <div class="form-group col-md-5">
 								      <label for="password">비밀번호</label>
-								      <input type="password" class="form-control" id="password" placeholder="Password">
+								      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
 								    </div>
 								  </div>
 								  <div class="form-check">

@@ -4,9 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
 
-<select id="selectOneMember" resultType="String">
+<select id="selectOneMember" resultMap="memberMap">
 	select
-		member_id
+		*
 	from
 		member
 	where
@@ -34,5 +34,8 @@
 		)
 		
 </insert>
+
+<resultMap type="member" id="memberMap">
+</resultMap>
 
 </mapper>

@@ -18,31 +18,40 @@
                 
                 <!-- Please visit https://templatemo.com/contact page if you do not know how to setup the contact form -->
                 
-                    <form id="contact" action="" method="post">
+                    <form id="shopRegistrationForm" class="contact" action="${pageContext.request.contextPath }/shop" method="post">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="">
                               <fieldset>
-                                <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                              	<label for="shopName" class="text-light">가게명</label>
+                                <input name="shopName" type="text" class="form-control text-light" id="shopName" placeholder="가게명" required>
+                              </fieldset>
+                            </div><br />
+                            <div class="">
+                              <fieldset>
+                              	<label for="shopAddr" class="text-light">가게주소</label>
+                                <input name="shopAddr" type="text" class="form-control text-light" id="shopAddr" placeholder="가게주소" required>
                               </fieldset>
                             </div>
-                            <div class="col-md-4">
+                             <div class="">
                               <fieldset>
-                                <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                              	<label for="openTime" class="text-light">개점시간</label>
+                                <input name="openTime" type="time" class="form-control" id="openTime">
+                              </fieldset>
+                              <fieldset>
+                              	<label for="closeTime" class="text-light">폐점시간</label>
+                                <input name="closeTime" type="time" class="form-control" id="closeTime">
                               </fieldset>
                             </div>
-                             <div class="col-md-4">
+                            <div class="">
                               <fieldset>
-                                <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                              	<label for="shopPhone" class="text-light">연락번호</label>
+                                <input name="shopPhone" type="tel" class="form-control text-light" id="shopPhone" placeholder="연락번호">
                               </fieldset>
                             </div>
-                            <div class="col-md-12">
+                            
+                            <div class="">
                               <fieldset>
-                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="btn">Send it now</button>
+                                <button type="submit" id="form-submit" class="btn text-center">Send it now</button>
                               </fieldset>
                             </div>
                         </div>

@@ -725,7 +725,7 @@ transition-delay: 0.3s;
 }
 
 
-#contact .col-md-4 {
+.contact .col-md-4 {
 	padding-right: 15px;
 	padding-left: 15px;
 }
@@ -735,21 +735,21 @@ transition-delay: 0.3s;
 	margin-top: 10px;
 }
 
-.contact-us #contact {
+.contact-us .contact {
 	min-height: 500px;
-	height: 500px;
+	height: 800px;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	padding-left: 120px;
 	padding-right: 120px;
-	text-align: center;
-	background-image: url(../img/contact-bg.png);
+	text-align: left;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bung-eo-bbang.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 }
 
-#contact input {
+.contact input {
   border-radius: 0px;
   padding-left: 15px;
   font-size: 13px;
@@ -767,7 +767,7 @@ transition-delay: 0.3s;
   margin-bottom: 30px;
 }
 
-#contact textarea {
+.contact textarea {
   border-radius: 0px;
   padding-left: 15px;
   padding-top: 10px;
@@ -789,7 +789,7 @@ transition-delay: 0.3s;
   margin-bottom: 25px;
 }
 
-#contact button {
+.contact button {
 	float: left;
 	padding: 14px 20px;
 	background-color: #f39e4b;
@@ -805,10 +805,10 @@ transition-delay: 0.3s;
 
 .contact-right-content {
 	min-height: 500px;
-	height: 500px;
-	line-height: 500px;
-	padding-top: 150px;
-	padding-bottom: 150px;
+	height: 800px;
+	line-height: 800px;
+	padding-top: 300px;
+	padding-bottom: 300px;
 	text-align: center;
 	background-image: url(../img/contact-right-bg.png);
 	background-repeat: no-repeat;
@@ -1050,12 +1050,12 @@ footer p em {
 		padding-left: 10px;
 	}
 
-	.contact-us #contact {
+	.contact-us .contact {
 		padding-left: 60px;
 		padding-right: 60px;
 	}
 
-	.contact-us #contact {
+	.contact-us .contact {
 		min-height: 600px;
 		height: 600px;
 		padding-top: 60px;

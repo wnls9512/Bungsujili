@@ -50,8 +50,8 @@ public class MemberController {
 	@ResponseBody
 	public Map<String, Object> checkIdDuplicate(@RequestParam("memberId") String memberId) {
 		
-		String oneMember = memberService.selectOneMember(memberId);
-		boolean isUsable = (oneMember == null);	//oneMember가 null이면 isUsable = true
+		Member member = memberService.selectOneMember(memberId);
+		boolean isUsable = (member == null);	//oneMember가 null이면 isUsable = true
 		
 		Map<String, Object> map = new HashMap<>();
 		map.put("isUsable", isUsable);
@@ -60,13 +60,10 @@ public class MemberController {
 		return map;
 	}
 	
-	@PostMapping("/joinMember")
-	public String memberJoin(RedirectAttributes redirectAttr, 
+	@PostMapping("/join")
+	public String join(RedirectAttributes redirectAttr, 
 							 Member member,
 							 Auth auth) {
-
-		System.out.println("member="+member);
-		System.out.println("authority="+auth);
 		
 		int result = memberService.joinMember(member);
 		int result2 = memberService.joinMemberAuth(auth);
@@ -79,5 +76,7 @@ public class MemberController {
 		
 		return "redirect:/";
 	}
+	
+	
 
 }

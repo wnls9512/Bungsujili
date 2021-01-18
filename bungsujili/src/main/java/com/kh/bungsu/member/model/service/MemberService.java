@@ -5,7 +5,7 @@ import com.kh.bungsu.member.model.vo.Member;
 
 public interface MemberService {
 
-	String selectOneMember(String memberId);
+	Member selectOneMember(String memberId);
 
 	int joinMember(Member member);
 
