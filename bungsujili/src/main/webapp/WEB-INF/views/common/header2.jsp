@@ -61,7 +61,7 @@ https://templatemo.com/tm-513-avalon
 <body>
 
 	<section class="header" id="top_top">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style="z-index:1;">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style="z-index:200;">
 		  <div class="container-fluid">
 		    <a class="navbar-brand fs-1" href="#">
 				<img src="${pageContext.request.contextPath }/resources/img/logo/팥붕어빵.png" alt="로고" width="50px" />
@@ -80,8 +80,8 @@ https://templatemo.com/tm-513-avalon
 		          </a>
 		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 		            <li><a class="dropdown-item fs-3" href="#">가까운 음식점 찾기</a></li>
-		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/member/registerShop">가게 등록하기</a></li>
-		            <li><a class="dropdown-item fs-3" href="#">가게 제보하기</a></li>
+		            <li><a class="dropdown-item fs-3" href="#">가게 등록하기</a></li>
+		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/board/shop">가게 제보하기</a></li>
 		          </ul>
 		        </li>
 		      </ul>
