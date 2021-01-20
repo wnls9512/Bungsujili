@@ -22,36 +22,30 @@
                         <div class="row">
                             <div class="">
                               <fieldset>
-                              	<label for="shopName" class="text-light">가게명</label>
-                                <input name="shopName" type="text" class="form-control text-light" id="shopName" placeholder="가게명" required>
+                              	<label for="shopName" class="text-light">제목</label>
+                                <input name="shopName" type="text" class="form-control" id="shopName" placeholder="가게명" required>
                               </fieldset>
                             </div><br />
                             <div class="">
                               <fieldset>
                               	<label for="shopAddr" class="text-light">가게주소</label>
-                                <input name="shopAddr" type="text" class="form-control text-light" id="shopAddr" placeholder="가게주소" required>
+                                <input name="shopAddr" type="text" class="form-control" id="shopAddr" placeholder="가게주소" required>
                               </fieldset>
                             </div>
                             <span class="text-center text-light">정확한 위치를 클릭해 마커를 위치시켜주세요!</span>
                             <div id="map" style="width:100%;height:350px;z-index:100;"></div>
                             <div id="clickLatlng" class="mb-5 text-light"></div>
-                            <div>
-                              <fieldset>
-                              	<label for="openTime" class="text-light">개점시간</label>
-                                <input name="openTime" type="time" class="form-control" id="openTime">
-                              </fieldset>
-                              <fieldset>
-                              	<label for="closeTime" class="text-light">폐점시간</label>
-                                <input name="closeTime" type="time" class="form-control" id="closeTime">
-                              </fieldset>
-                            </div>
-                            <div class="">
-                              <fieldset>
-                              	<label for="shopPhone" class="text-light">연락번호</label>
-                                <input name="shopPhone" type="tel" class="form-control text-light" id="shopPhone" placeholder="연락번호">
-                              </fieldset>
-                            </div>
                             
+                            <div class="input-group mb-3">
+								<label for="inputImg" class="text-light">이미지 첨부</label>
+							    <input type="file" class="form-control-file" id="inputImg" name="inputImg">
+							</div>
+                            
+                            <div>
+                            	<label for="content" class="text-light">내용</label>
+                            	<textarea name="content" class="form-control" id="content" cols="30" rows="10"
+                            			  placeholder="ex) 슈크림 붕어빵, 팥 붕어빵 있어요! 세 개에 삼천원!"></textarea>
+                            </div>
                             <div class="">
                               <fieldset>
                                 <button type="submit" id="form-submit" class="btn text-center">Send it now</button>

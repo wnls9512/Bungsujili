@@ -39,7 +39,7 @@ div#memberId-container span.error{color:red; font-weight:bold;}
 
                                 <form id="memberJoinFrm" action="${pageContext.request.contextPath }/member/join" method="POST">
                                 	<div class="form-row mt-2">
-										<div class="form-group">
+<!-- 										<div class="form-group">
 											 <div class="custom-control custom-radio form-check form-check-inline p-0">
 											    <input type="radio" id="authority1" name="authority" class="custom-control-input" value="ROLE_USER" checked="">
 											    <label class="custom-control-label" for="authority1"><h4>일반 회원</h4></label>
@@ -48,7 +48,7 @@ div#memberId-container span.error{color:red; font-weight:bold;}
 											    <input type="radio" id="authority2" name="authority" class="custom-control-input" value="ROLE_COMPANY">
 											    <label class="custom-control-label" for="authority2"><h4>사업자</h4></label>
 											 </div>
-										</div>
+										</div> -->
 								
 										<div class="form-group" id="memberId-container">
 										  <label class="col-form-label" for="memberId"><h4>아이디</h4></label>
@@ -71,13 +71,13 @@ div#memberId-container span.error{color:red; font-weight:bold;}
 										  <input type="text" class="form-control" id="nickname" name="nickname" required>
 										</div>
 										<div class="form-group">
-										  <label class="col-form-label" for="phone"><h4>전화번호</h4></label>
-										  <input type="tel" class="form-control" id="phone" name="phone" required>
+										  <label class="col-form-label" for="email"><h4>이메일</h4></label>
+										  <input type="email" class="form-control" id="email" name="email" required>
 										</div>
-										<div class="form-group">
+<!-- 										<div class="form-group">
 										  <label class="col-form-label" for="businessNo"><h4>사업자번호</h4></label>
 										  <input type="text" class="form-control" id="businessNo" name="businessNo" disabled>
-										</div>
+										</div> -->
 										</div>								  
 	                              <input type="submit" class="btn btn-warning btn-lg rounded-pill mt-4 mx-auto" 
 	                              		 style="height:40px; width:60px; font-size:15px; font-weight:700; color:white" 
@@ -170,4 +170,4 @@ $('#authority1').on('click', function() {
 });
 
 </script>        
-<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/views/common/footer2.jsp"></jsp:include>
