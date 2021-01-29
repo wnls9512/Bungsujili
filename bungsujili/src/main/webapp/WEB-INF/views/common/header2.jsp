@@ -60,7 +60,7 @@ https://templatemo.com/tm-513-avalon
     </head>
 <body>
 
-	<section class="header" id="top_top">
+	<section class="header">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style="z-index:200;">
 		  <div class="container-fluid">
 		    <a class="navbar-brand fs-1" href="#">

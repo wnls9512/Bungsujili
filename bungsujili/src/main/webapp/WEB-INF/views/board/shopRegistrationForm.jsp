@@ -44,7 +44,7 @@
                             <div>
                             	<label for="content" class="text-light">내용</label>
                             	<textarea name="content" class="form-control" id="content" cols="30" rows="10"
-                            			  placeholder="ex) 슈크림 붕어빵, 팥 붕어빵 있어요! 세 개에 삼천원!"></textarea>
+                            			  placeholder="ex) 슈크림 붕어빵, 팥 붕어빵 있어요! 세 개에 천 원!"></textarea>
                             </div>
                             <div class="">
                               <fieldset>

@@ -23,5 +23,10 @@ public class BoardController {
 		return mav;
 	}
 	
+	@RequestMapping("/1")
+	public ModelAndView boardDetail(ModelAndView mav) {
+		mav.setViewName("board/boardDetail");
+		return mav;
+	}
 	
 }
