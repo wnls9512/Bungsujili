@@ -27,8 +27,8 @@
                 <div class="col-md-4">
                     <div class="right-banner-content">
                         <div class="logo"><a href="#"><img src="${pageContext.request.contextPath }/resources/img/logo.png" alt=""></a></div>
-                        <h2>Avalon</h2>
-                        <span>Creative <em>HTML</em> Template</span>
+                        <h2>붕수지리</h2>
+                        <span>내 주변의 <em>붕어빵집 </em>찾기</span>
                         <div class="line-dec"></div>
                         <p>â Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et sem blandit, rhoncus ante a, varius libero. Cras elementum tincidunt ullamcorper. Sed vehic ula dictum tortor ut aliquet. â</p>
                         <ul class="social-icons">

@@ -6,6 +6,11 @@ https://templatemo.com/tm-513-avalon
 
 */
 
+#board-title {
+	background-image: url("../img/bung-eo-bbang.jpg");
+}
+
+
 * {
     margin: 0;
     padding: 0;
