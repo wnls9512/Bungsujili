@@ -37,7 +37,7 @@ div#memberId-container span.error{color:red; font-weight:bold;}
                             <div class="">
                                 <h2><em>회원가입</em></h2>
 
-                                <form id="memberJoinFrm" action="${pageContext.request.contextPath }/member/join" method="POST">
+                                <form id="memberJoinFrm" action="${pageContext.request.contextPath }/sign-up" method="POST">
                                 	<div class="form-row mt-2">
 <!-- 										<div class="form-group">
 											 <div class="custom-control custom-radio form-check form-check-inline p-0">
@@ -105,13 +105,12 @@ $("#memberId").keyup(function(){
 		$("#idValid").val(0);
 		return;
 	}
+	var memberId = $(this).val();
 	
 	$.ajax({
-		url : "${ pageContext.request.contextPath }/member/checkIdDuplicate.do",
-		data :	{
-				memberId : $(this).val()
-			},
+		url : "${ pageContext.request.contextPath }/member/" + memberId,
 			dataType : "json",
+			method : "GET",
 			success : function(data){
 				console.log(data);
 

@@ -23,34 +23,51 @@
                             <div class="">
                               <fieldset>
                               	<label for="shopName" class="text-light">제목</label>
-                                <input name="shopName" type="text" class="form-control" id="shopName" placeholder="가게명" required>
+                                <input name="shopName" type="text" class="form-control input" id="shopName" placeholder="가게명" required>
                               </fieldset>
                             </div><br />
                             <div class="">
                               <fieldset>
                               	<label for="shopAddr" class="text-light">가게주소</label>
-                                <input name="shopAddr" type="text" class="form-control" id="shopAddr" placeholder="가게주소" required>
+                                <input name="shopAddr" type="text" class="form-control input" id="shopAddr" placeholder="가게주소" required>
                               </fieldset>
                             </div>
                             <span class="text-center text-light">정확한 위치를 클릭해 마커를 위치시켜주세요!</span>
                             <div id="map" style="width:100%;height:350px;z-index:100;"></div>
                             <div id="clickLatlng" class="mb-5 text-light"></div>
-                            
+                          
                             <div class="input-group mb-3">
 								<label for="inputImg" class="text-light">이미지 첨부</label>
-							    <input type="file" class="form-control-file" id="inputImg" name="inputImg">
+							    <input type="file" class="form-control-file input" id="inputImg" name="inputImg">
 							</div>
-                            
+
                             <div>
                             	<label for="content" class="text-light">내용</label>
+                            	
+	                            <div id="category">
+	                            	<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+									  <label class="form-check-label text-light" for="inlineCheckbox1">붕어빵</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+									  <label class="form-check-label text-light" for="inlineCheckbox2">계란빵</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+									  <label class="form-check-label text-light" for="inlineCheckbox3">호떡</label>
+									</div>
+	                            </div>
+                            	
                             	<textarea name="content" class="form-control" id="content" cols="30" rows="10"
                             			  placeholder="ex) 슈크림 붕어빵, 팥 붕어빵 있어요! 세 개에 천 원!"></textarea>
                             </div>
                             <div class="">
                               <fieldset>
-                                <button type="submit" id="form-submit" class="btn text-center">Send it now</button>
+                                <button type="submit" id="form-submit" class="btn text-center">제보하기</button>
                               </fieldset>
                             </div>
+
                         </div>
                     </form>
                 </div>

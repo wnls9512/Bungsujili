@@ -57,6 +57,12 @@ https://templatemo.com/tm-513-avalon
 			font-size: 17px;
 		}
 	</style>
+	<script>
+	<c:if test="${ not empty msg }">
+		alert('${ msg }');
+		console.log('${ msg }');
+	</c:if>
+	</script>
     </head>
 <body>
 
@@ -87,8 +93,8 @@ https://templatemo.com/tm-513-avalon
 		        </li>
 		      </ul>
 		      <div class="fs-4">
-				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/member/join">회원가입</a>
-				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/member/login">로그인</a>
+				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/sign-up">회원가입</a>
+				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/sign-in">로그인</a>
 				  <a class="p-2 link-unstyled" href="#">마이페이지</a>
 			  </div>
 			  &nbsp; &nbsp; &nbsp;

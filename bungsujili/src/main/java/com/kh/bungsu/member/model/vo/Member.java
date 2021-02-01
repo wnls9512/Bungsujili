@@ -18,9 +18,7 @@ public class Member implements Serializable {
 	private String memberId;
 	private String password;
 	private String nickname;
-	private String phone;
+	private String email;
 	private String regDate;
-	private String businessNo;
-	private char quitYn;
 	
 }
