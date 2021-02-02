@@ -58,17 +58,16 @@
                     <div class="best-offer-right-content">
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
-                                <h2>Modern Web Design<br><em>Avalon Theme</em></h2>
-                                <p>Avalon Theme is a full-width modern HTML template for everyone. Please tell your friends about <a href="https://fb.com/templatemo" target="_parent">TemplateMo</a>. Thank you. You are allowed <strong>to use this template</strong> for your business. 
-                                <br><br>You have <strong>no permission</strong> to re-distribute this template as a downloadable ZIP file on any website. If you see this on any website, that means an illegal copy. Please contact us if you have any question.</p>
+                                <h2>붕수지리<br><em>주변 붕어빵집 확인하고 제보하기</em></h2>
+                                <p>붕어빵이 먹고 싶을 때, <br />내 주변 위치의 붕어빵집을 확인하고 찾아갈 수 있어요!</p>
                                 <ul>
-                                    <li>+ Aenean eget ex faucibus, tempor nibh vel.</li>
-                                    <li>+ Bibendum tortor. Suspendisse a diam viverra.</li>
-                                    <li>+ Finibus ipsum et, imperdiet felis.</li>
-                                    <li>+ Donec laoreet efficitur ultrices sit amet enim.</li>
+                                    <li>+ 붕어빵집 제보하기</li>
+                                    <li>+ 다른 사람들의 붕어빵집 제보글 모아보기</li>
+                                    <li>+ 붕어빵집에 대해 이야기하며, 다양한 사람들과 소통하기</li>
+                                    <li>+ 내 주변 위치의 붕어빵집 확인하기!</li>
                                 </ul>
                                 <div class="pink-button">
-                                    <a href="#" class="scroll-link" data-id="events-section">Discover More</a>
+                                    <a href="#" class="scroll-link" data-id="events-section">최근 제보된 가게 확인하기</a>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-12">
@@ -89,10 +88,10 @@
                         <div class="section-heading">
                             <div class="filter-categories">
                                 <ul class="project-filter">
-                                    <li class="filter" data-filter="all"><span>Show All</span></li>
-                                    <li class="filter" data-filter="design"><span>Design Meeting</span></li>
+                                    <li class="filter" data-filter="all"><span>최근 제보된 가게</span></li>
+<!--                                     <li class="filter" data-filter="design"><span>Design Meeting</span></li>
                                     <li class="filter" data-filter="start"><span>App Start Up</span></li>
-                                    <li class="filter" data-filter="web"><span>Web Conferences</span></li>
+                                    <li class="filter" data-filter="web"><span>Web Conferences</span></li> -->
                                 </ul>
                             </div>
                         </div>

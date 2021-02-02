@@ -19,21 +19,11 @@
 		#{ memberId },
 		#{ password },
 		#{ nickname },
-		#{ phone },
-		default,
-		#{ businessNo },
+		#{ email },
 		default
 	)
 </insert>
 
-<insert id="joinMemberAuth">
-	insert into auth
-		values(
-			#{ memberId },
-			#{ authority }
-		)
-		
-</insert>
 
 <resultMap type="member" id="memberMap">
 </resultMap>

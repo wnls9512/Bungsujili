@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kh.bungsu.member.model.dao.MemberDAO;
-import com.kh.bungsu.member.model.vo.Auth;
 import com.kh.bungsu.member.model.vo.Member;
 
 @Service
@@ -23,10 +22,6 @@ public class MemberServiceImpl implements MemberService {
 		return memberDAO.joinMember(member);
 	}
 
-	@Override
-	public int joinMemberAuth(Auth auth) {
-		return memberDAO.joinMemberAuth(auth);
-	}
 	
 	
 	
