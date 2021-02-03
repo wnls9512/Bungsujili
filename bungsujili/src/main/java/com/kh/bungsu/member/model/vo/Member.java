@@ -20,5 +20,6 @@ public class Member implements Serializable {
 	private String nickname;
 	private String email;
 	private String regDate;
+	private char quitYn;
 	
 }

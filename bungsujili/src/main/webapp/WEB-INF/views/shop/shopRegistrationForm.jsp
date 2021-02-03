@@ -19,47 +19,49 @@
                 <!-- Please visit https://templatemo.com/contact page if you do not know how to setup the contact form -->
                 
                     <form id="shopRegistrationForm" class="contact" action="${pageContext.request.contextPath }/shop" method="post">
+                        <input type="hidden" name="lat" value=""/>
+                        <input type="hidden" name="lon" value=""/>
                         <div class="row">
                             <div class="">
                               <fieldset>
-                              	<label for="shopName" class="text-light">제목</label>
-                                <input name="shopName" type="text" class="form-control input" id="shopName" placeholder="가게명" required>
+                              	<label for="sTitle" class="text-light">가게명</label>
+                                <input type="text" class="form-control input" id="sTitle" name="sTitle" placeholder="가게명" required>
                               </fieldset>
                             </div><br />
-                            <div class="">
-                              <fieldset>
-                              	<label for="shopAddr" class="text-light">가게주소</label>
-                                <input name="shopAddr" type="text" class="form-control input" id="shopAddr" placeholder="가게주소" required>
-                              </fieldset>
-                            </div>
                             <span class="text-center text-light">정확한 위치를 클릭해 마커를 위치시켜주세요!</span>
                             <div id="map" style="width:100%;height:350px;z-index:100;"></div>
-                            <div id="clickLatlng" class="mb-5 text-light"></div>
+                            <div id="clickLatlng" class="mb-3 text-light"></div>
+                            <div class="">
+                              <fieldset>
+                              	<label for="addr" class="text-light">가게주소</label>
+                                <input type="text" class="form-control input text-dark fw-bold" id="addr" name="addr" placeholder="가게주소" readonly>
+                              </fieldset>
+                            </div>
                           
                             <div class="input-group mb-3">
-								<label for="inputImg" class="text-light">이미지 첨부</label>
-							    <input type="file" class="form-control-file input" id="inputImg" name="inputImg">
+								<label for="imgOriginalName" class="text-light">이미지 첨부</label>
+							    <input type="file" class="form-control-file input" id="imgOriginalName" name="imgOriginalName">
 							</div>
 
                             <div>
-                            	<label for="content" class="text-light">내용</label>
+                            	<label for="sContent" class="text-light">내용</label>
                             	
 	                            <div id="category">
 	                            	<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-									  <label class="form-check-label text-light" for="inlineCheckbox1">붕어빵</label>
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu0" value="붕어빵">
+									  <label class="form-check-label text-light" for="menu0">붕어빵</label>
 									</div>
 									<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-									  <label class="form-check-label text-light" for="inlineCheckbox2">계란빵</label>
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu1" value="계란빵">
+									  <label class="form-check-label text-light" for="menu1">계란빵</label>
 									</div>
 									<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-									  <label class="form-check-label text-light" for="inlineCheckbox3">호떡</label>
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu2" value="호떡">
+									  <label class="form-check-label text-light" for="menu2">호떡</label>
 									</div>
 	                            </div>
                             	
-                            	<textarea name="content" class="form-control" id="content" cols="30" rows="10"
+                            	<textarea name="sContent" class="form-control" id="sContent" cols="30" rows="10"
                             			  placeholder="ex) 슈크림 붕어빵, 팥 붕어빵 있어요! 세 개에 천 원!"></textarea>
                             </div>
                             <div class="">
@@ -143,6 +145,8 @@ kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
 	
 	var resultDiv = document.getElementById('clickLatlng'); 
 	resultDiv.innerHTML = message;
+	$("[name=lon]").val(latlng.getLng());
+	$("[name=lat]").val(latlng.getLat());
 
 	// 좌표값으로 주소 가져오기
     var address;
@@ -152,7 +156,7 @@ kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
         	address = result[0].address_name;
        	}
 
-	$("[name=shopAddr]").val(address);
+	$("[name=addr]").val(address);
    
     });
 	
