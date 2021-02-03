@@ -29,7 +29,7 @@
 					<th>1</th>
 					<td>경기도 군포시</td>
 					<td>
-						<a href="${pageContext.request.contextPath }/board/1">붕어빵집!!</a>
+						<a href="${pageContext.request.contextPath }/list/1">붕어빵집!!</a>
 						<%-- <a href="${pageContext.request.contextPath }/board/${ board.boardNo }">붕어빵집!!</a> --%>
 					</td>
 					<td>붕어빵조아</td>

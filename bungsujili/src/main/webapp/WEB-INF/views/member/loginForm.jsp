@@ -27,29 +27,29 @@
                             <div class="">
                                 <h2><em>로그인</em></h2>
                                 
-                                <form action="${pageContext.request.contextPath }/member/login"
+                                <form action="${pageContext.request.contextPath }/sign-in"
                                 	  method="POST">
                                 	<div class="form-row">
-								    <div class="form-group col-md-5">
+								    <div class="form-group col-md-5 mb-3">
 								      <label for="inputEmail4"><h4>아이디</h4></label>
 								      <input type="text" class="form-control" id="memberId" name="memberId" placeholder="ID">
-								    <small id="idHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+								    <!-- <small id="idHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 								    </div>
-								    <div class="form-group col-md-5">
+								    <div class="form-group col-md-5 mb-3">
 								      <label for="password">비밀번호</label>
 								      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
 								    </div>
 								  </div>
 								  <div class="form-check">
 								    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-								    <label class="form-check-label" for="exampleCheck1"> Check me out</label>
+								    <label class="form-check-label" for="exampleCheck1"> 아이디 저장 </label>
 								  </div>								  
 										<input type="submit" class="btn btn-warning btn-lg rounded-pill mt-4 mx-auto" 
 	                              		 style="height:40px; width:70px; font-size:15px; font-weight:700; color:white" 
 	                              		 value="LOGIN"/>
 	                              		 <input type="button" class="btn btn-light btn-lg rounded-pill mt-4 mx-auto" 
 	                              		 style="height:40px; width:60px; font-size:15px; font-weight:700;" 
-	                              		 value="JOIN" onClick="location.href='${pageContext.request.contextPath }/member/join'"/>
+	                              		 value="JOIN" onClick="location.href='${pageContext.request.contextPath }/sign-up'"/>
 								</form>
                             </div>
                             <div class="col-md-6 col-sm-12">
