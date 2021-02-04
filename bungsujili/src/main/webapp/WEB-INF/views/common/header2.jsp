@@ -86,15 +86,21 @@ https://templatemo.com/tm-513-avalon
 		          </a>
 		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 		            <li><a class="dropdown-item fs-3" href="#">가까운 음식점 찾기</a></li>
-		            <!-- <li><a class="dropdown-item fs-3" href="#">가게 등록하기</a></li> -->
-		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/shop">가게 제보하기</a></li>
+		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/shop" id="checkLogin">가게 제보하기</a></li>
 		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/list">제보 글 모아보기</a></li>
 		          </ul>
 		        </li>
 		      </ul>
 		      <div class="fs-4">
+		      
+		      <c:if test="${ empty loginMember }">
 				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/sign-up">회원가입</a>
 				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/sign-in">로그인</a>
+		      </c:if>
+		      <c:if test="${ not empty loginMember }">
+		      	${ loginMember.nickname } 😉😉		      
+				  <a class="p-2 link-unstyled" href="${pageContext.request.contextPath }/sign-out">로그아웃</a>
+		      </c:if>
 				  <a class="p-2 link-unstyled" href="#">마이페이지</a>
 			  </div>
 			  &nbsp; &nbsp; &nbsp;
@@ -111,3 +117,14 @@ https://templatemo.com/tm-513-avalon
 		
 	</section>
 	
+	
+
+<script>
+$("#checkLogin").on("click",function(event){
+	<c:if test="${ empty loginMember }">
+		alert("로그인 후 이용해주세요.");
+	    event.preventDefault();
+	</c:if>
+});
+
+</script>
