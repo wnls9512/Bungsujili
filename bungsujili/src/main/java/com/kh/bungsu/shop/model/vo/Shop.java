@@ -20,7 +20,7 @@ public class Shop implements Serializable {
 	private String memberId;
 	private String sTitle;
 	private String sContent;
-	private String sMenu;
+	private String[] sMenu;
 	private Date sDate;
 	private int repCount;
 	private double lon;
