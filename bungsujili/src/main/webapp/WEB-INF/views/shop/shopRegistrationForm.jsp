@@ -18,9 +18,11 @@
                 
                 <!-- Please visit https://templatemo.com/contact page if you do not know how to setup the contact form -->
                 
-                    <form id="shopRegistrationForm" class="contact" action="${pageContext.request.contextPath }/shop" method="post">
+                    <form id="shopRegistrationForm" class="contact" action="${pageContext.request.contextPath }/shop"
+						  method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="memberId" value="${ loginMember.memberId }" />
                         <input type="hidden" name="lat" value=""/>
-                        <input type="hidden" name="lon" value=""/>
+                        <input type="hidden" name="lon" value=""/> 
                         <div class="row">
                             <div class="">
                               <fieldset>
@@ -39,8 +41,8 @@
                             </div>
                           
                             <div class="input-group mb-3">
-								<label for="imgOriginalName" class="text-light">이미지 첨부</label>
-							    <input type="file" class="form-control-file input" id="imgOriginalName" name="imgOriginalName">
+								<label for="imgFile" class="text-light">이미지 첨부</label>
+							    <input type="file" class="form-control-file input" id="imgFile" name="imgFile">
 							</div>
 
                             <div>
@@ -48,15 +50,15 @@
                             	
 	                            <div id="category">
 	                            	<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu0" value="붕어빵">
+									  <input class="form-check-input" type="checkbox" name="sMenu[]" id="menu0" value="붕어빵">
 									  <label class="form-check-label text-light" for="menu0">붕어빵</label>
 									</div>
 									<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu1" value="계란빵">
+									  <input class="form-check-input" type="checkbox" name="sMenu[]" id="menu1" value="계란빵">
 									  <label class="form-check-label text-light" for="menu1">계란빵</label>
 									</div>
 									<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu2" value="호떡">
+									  <input class="form-check-input" type="checkbox" name="sMenu[]" id="menu2" value="호떡">
 									  <label class="form-check-label text-light" for="menu2">호떡</label>
 									</div>
 	                            </div>

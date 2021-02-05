@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString
@@ -20,7 +20,6 @@ public class Shop implements Serializable {
 	private String memberId;
 	private String sTitle;
 	private String sContent;
-	private String[] sMenu;
 	private Date sDate;
 	private int repCount;
 	private double lon;
@@ -28,5 +27,6 @@ public class Shop implements Serializable {
 	private String addr;
 	private String imgOriginalName;
 	private String imgRenamedName;
+	//private String[] sMenu;
 	
 }

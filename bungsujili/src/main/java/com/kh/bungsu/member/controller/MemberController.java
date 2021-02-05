@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -91,15 +92,17 @@ public class MemberController {
 							   @RequestParam("memberId") String memberId,
 							   @RequestParam("password") String password,
 							   HttpSession session,
-							   RedirectAttributes redirectAttr) {
+							   RedirectAttributes redirectAttr,
+							   Model model
+							   ) {
 		
 		Member member = memberService.selectOneMember(memberId);
-		
-		String location = "";
+		log.debug("member={}", member);
+		String location = "/";
 		
 		// 로그인 성공
 		if(member != null && passwordEncoder.matches(password, member.getPassword())) {
-			mav.addObject("loginMember", member);
+			model.addAttribute("loginMember", member);
 			
 			String next = (String) session.getAttribute("next");
 			location = next != null ? next : location;
@@ -110,8 +113,8 @@ public class MemberController {
 			redirectAttr.addFlashAttribute("msg", "아이디 또는 비밀번호가 일치하지 않습니다.");
 		}
 		
-		redirectAttr.addFlashAttribute("memberId", memberId);
-		mav.setViewName("redirect:/"+location);
+		//redirectAttr.addFlashAttribute("memberId", memberId);
+		mav.setViewName("redirect:"+location);
 		
 		return mav;
 	}
