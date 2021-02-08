@@ -17,7 +17,8 @@
 		#{ lat },
 		#{ addr },
 		#{ imgOriginalName },
-		#{ imgRenamedName }
+		#{ imgRenamedName },
+		#{ sMenu }
 	)
 
 </insert>
