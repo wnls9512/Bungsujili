@@ -27,6 +27,6 @@ public class Shop implements Serializable {
 	private String addr;
 	private String imgOriginalName;
 	private String imgRenamedName;
-	//private String[] sMenu;
+	private String[] sMenu;
 	
 }

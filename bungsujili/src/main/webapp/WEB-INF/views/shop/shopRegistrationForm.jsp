@@ -50,15 +50,15 @@
                             	
 	                            <div id="category">
 	                            	<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu[]" id="menu0" value="붕어빵">
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu0" value="붕어빵">
 									  <label class="form-check-label text-light" for="menu0">붕어빵</label>
 									</div>
 									<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu[]" id="menu1" value="계란빵">
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu1" value="계란빵">
 									  <label class="form-check-label text-light" for="menu1">계란빵</label>
 									</div>
 									<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu[]" id="menu2" value="호떡">
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu2" value="호떡">
 									  <label class="form-check-label text-light" for="menu2">호떡</label>
 									</div>
 	                            </div>

@@ -74,13 +74,13 @@ public class ShopController {
 		}
 		
 		
-		//int result = shopService.shopRegister(shop);
 		log.debug("Shop={}", shop);
+		int result = shopService.shopRegister(shop);
 		
-		//mav.addObject("shop", shop);
+		redirectAttr.addFlashAttribute("msg", result > 0? "가게가 등록되었습니다😊" : "가게 등록에 실패하였습니다😢 ");		
 		
-		// 상세보기 페이지로 이동하기
-		mav.setViewName("redirect:/");
+		// 제보글 모아보기 페이지로 이동하기
+		mav.setViewName("shop/shopList");
 		return mav;
 	}
 	
