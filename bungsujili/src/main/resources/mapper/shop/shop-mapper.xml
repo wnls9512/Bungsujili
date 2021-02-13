@@ -4,23 +4,20 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="shop">
 
-<insert id="shopRegister">
+<insert id="shopRegister" useGeneratedKeys="true" keyProperty="sNo">
+	INSERT INTO 
+		shop(MEMBER_ID, S_TITLE, S_CONTENT, LON, LAT, ADDR, IMG_RENAMED_NAME, IMG_ORIGINAL_NAME)
+	VALUE(#{memberId}, #{sTitle}, #{sContent}, #{lon}, #{lat}, #{addr}, #{imgOriginalName}, #{imgRenamedName}) 
+</insert>
 
-	insert into shop values(
-		default,
-		#{ memberId },
-		#{ sTitle },
-		#{ sContent },
-		default,
-		default,
-		#{ lon },
-		#{ lat },
-		#{ addr },
-		#{ imgOriginalName },
-		#{ imgRenamedName },
-		#{ sMenu }
-	)
-
+<insert id="insertMenuMapping" parameterType="java.util.HashMap">
+	INSERT INTO 
+		shop_mapping_menu(S_NO, MENU_NO)
+	VALUES
+	<foreach collection="menuArr" item="menu" index="index" 
+			 separator=",">
+		(#{sNo}, #{menu})
+	</foreach>		
 </insert>
 
 </mapper>
