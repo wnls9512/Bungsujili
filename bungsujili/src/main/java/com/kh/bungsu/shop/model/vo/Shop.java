@@ -2,6 +2,7 @@ package com.kh.bungsu.shop.model.vo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,6 +28,6 @@ public class Shop implements Serializable {
 	private String addr;
 	private String imgOriginalName;
 	private String imgRenamedName;
-	private String[] sMenu;
+	private int[] sMenu;
 	
 }

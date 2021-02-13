@@ -73,9 +73,9 @@ public class ShopController {
 			}
 		}
 		
-		
 		log.debug("Shop={}", shop);
 		int result = shopService.shopRegister(shop);
+		log.debug("result={}", shop.getSNo());
 		
 		redirectAttr.addFlashAttribute("msg", result > 0? "가게가 등록되었습니다😊" : "가게 등록에 실패하였습니다😢 ");		
 		
