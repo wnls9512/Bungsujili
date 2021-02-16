@@ -87,7 +87,7 @@ https://templatemo.com/tm-513-avalon
 		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 		            <li><a class="dropdown-item fs-3" href="#">가까운 음식점 찾기</a></li>
 		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/shop" id="checkLogin">가게 제보하기</a></li>
-		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/list">제보 글 모아보기</a></li>
+		            <li><a class="dropdown-item fs-3" href="${pageContext.request.contextPath }/shop/list">제보 글 모아보기</a></li>
 		          </ul>
 		        </li>
 		      </ul>

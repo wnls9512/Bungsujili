@@ -2,10 +2,14 @@ package com.kh.bungsu.shop.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,30 +26,47 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @Slf4j
+@RequestMapping("/shop")
 public class ShopController {
 
 	@Autowired
 	private ShopService shopService;
 	
-	@RequestMapping("/shop")
+	@RequestMapping("/")
 	public ModelAndView registerShop(ModelAndView mav) {
 		mav.setViewName("shop/shopRegistrationForm");
 		return mav;
 	}
 	
-	@RequestMapping("/list")
-	public ModelAndView shopList(ModelAndView mav) {
+	@GetMapping("/list")
+	public ModelAndView shopList(ModelAndView mav) {		
+		log.debug("####################################");
+		log.debug("## shopList ");
+		log.debug("####################################");
+		
+		List<Shop> shopList = null;
+		
+		try {
+			shopList = shopService.getShopAllList();
+			log.debug("# shopList = {}", shopList);
+			mav.addObject("shopList", shopList);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}		
 		mav.setViewName("shop/shopList");
 		return mav;
 	}
 	
-	@RequestMapping("/list/1")
+	@RequestMapping("/list/{sNo}")
 	public ModelAndView shopDetail(ModelAndView mav) {
+		log.debug("####################################");
+		log.debug("## shopDetail ");
+		log.debug("####################################");
 		mav.setViewName("shop/shopDetail");
 		return mav;
 	}
 	
-	@PostMapping("/shop")
+	@PostMapping("/")
 	public ModelAndView shopRegister(ModelAndView mav,
 									 RedirectAttributes redirectAttr,
 									 HttpServletRequest request,
@@ -75,7 +96,7 @@ public class ShopController {
 		
 		log.debug("Shop={}", shop);
 		int result = shopService.shopRegister(shop);
-		log.debug("result={}", shop.getSNo());
+		log.debug("result={}", shop.getsNo());
 		
 		redirectAttr.addFlashAttribute("msg", result > 0? "가게가 등록되었습니다😊" : "가게 등록에 실패하였습니다😢 ");		
 		
