@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -9,7 +8,11 @@
 <jsp:include page="/WEB-INF/views/common/header2.jsp">
 	<jsp:param value="" name="pageTitle"/>
 </jsp:include>
-
+<script>
+function shopDetail(sNo){
+	location.href = "<c:url value='list/" + sNo + "'/>";	
+}
+</script>
 <section id="board-container" class="py-5">
 	<div class="text-center mb-5 text-light" id="board-title" style="height:250px; line-height:250px;">
 		<span class="fs-1 align-middle">🥨🥨 붕어빵 제보 목록 🥨🥨</span>
@@ -25,74 +28,17 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th>1</th>
-					<td>경기도 군포시</td>
-					<td>
-						<a href="${pageContext.request.contextPath }/list/1">붕어빵집!!</a>
-						<%-- <a href="${pageContext.request.contextPath }/board/${ board.boardNo }">붕어빵집!!</a> --%>
-					</td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>2</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>3</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>4</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>5</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>6</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>7</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>8</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>9</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-				<tr>
-					<th>10</th>
-					<td>경기도 군포시</td>
-					<td><a href="#">붕어빵집!!</a></td>
-					<td>붕어빵조아</td>
-				</tr>
-			</tbody>
-		
+				<c:forEach items="${shopList}" var="item" varStatus="i">
+					<tr onclick="shopDetail('${item.sNo}')">
+						<th>${i.count }</th>
+						<td>${item.addr }</td>
+						<td>${item.sTitle }</td>
+						<td>${item.memberId }</td>
+					</tr>
+				</c:forEach>
+			</tbody>		
 		</table>
 	</div>
 </section>
 
 <jsp:include page="/WEB-INF/views/common/footer2.jsp"/>
-   

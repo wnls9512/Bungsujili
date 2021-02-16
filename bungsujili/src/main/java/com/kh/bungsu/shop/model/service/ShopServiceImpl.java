@@ -1,6 +1,7 @@
 package com.kh.bungsu.shop.model.service;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,16 +23,24 @@ public class ShopServiceImpl implements ShopService{
 	@Override
 	public int shopRegister(Shop shop) {
 		int result = shopDAO.shopRegister(shop);
-		log.debug("ShopNo={}", shop.getSNo());
+		log.debug("ShopNo={}", shop.getsNo());
 		
 		if(result != 0) {
 			HashMap<String, Object> param = new HashMap<>();
-			param.put("sNo", shop.getSNo());
-			param.put("menuArr", shop.getSMenu());
+			param.put("sNo", shop.getsNo());
+			param.put("menuArr", shop.getsMenu());
 			result = shopDAO.insertMenuMapping(param);
 		}
 		
 		return result;
 	}
+
+	@Override
+	public List<Shop> getShopAllList() {
+		List<Shop> shopList = shopDAO.getShopAllList();
+		return shopList;
+	}
+	
+	
 
 }
