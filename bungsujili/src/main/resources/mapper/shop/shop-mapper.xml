@@ -11,14 +11,14 @@
 		#{ memberId },
 		#{ sTitle },
 		#{ sContent },
+		#{ sMenu },
 		default,
 		default,
 		#{ lon },
 		#{ lat },
 		#{ addr },
 		#{ imgOriginalName },
-		#{ imgRenamedName },
-		#{ sMenu }
+		#{ imgRenamedName }
 	)
 
 </insert>
