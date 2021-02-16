@@ -50,16 +50,20 @@
                             	
 	                            <div id="category">
 	                            	<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu0" value="붕어빵">
-									  <label class="form-check-label text-light" for="menu0">붕어빵</label>
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu0" value="1">
+									  <label class="form-check-label text-light" for="menu0">팥붕어빵</label>
+									</div>
+	                            	<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu1" value="2">
+									  <label class="form-check-label text-light" for="menu1">슈크림붕어빵</label>
 									</div>
 									<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu1" value="계란빵">
-									  <label class="form-check-label text-light" for="menu1">계란빵</label>
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu2" value="3">
+									  <label class="form-check-label text-light" for="menu2">계란빵</label>
 									</div>
 									<div class="form-check form-check-inline">
-									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu2" value="호떡">
-									  <label class="form-check-label text-light" for="menu2">호떡</label>
+									  <input class="form-check-input" type="checkbox" name="sMenu" id="menu3" value="4">
+									  <label class="form-check-label text-light" for="menu3">호떡</label>
 									</div>
 	                            </div>
                             	
