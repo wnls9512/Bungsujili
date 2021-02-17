@@ -24,4 +24,10 @@
 	select * from shop
 </select>
 
+<select id="getShopInfoOne" resultType="shop">
+	select *
+	from shop
+	where s_no = #{sNo}
+</select>
+
 </mapper>

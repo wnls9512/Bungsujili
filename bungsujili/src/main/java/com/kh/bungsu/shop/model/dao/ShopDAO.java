@@ -13,4 +13,6 @@ public interface ShopDAO {
 
 	List<Shop> getShopAllList();
 
+	Shop getShopInfoOne(int sNo);
+
 }

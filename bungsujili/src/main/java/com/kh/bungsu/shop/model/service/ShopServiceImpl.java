@@ -40,7 +40,11 @@ public class ShopServiceImpl implements ShopService{
 		List<Shop> shopList = shopDAO.getShopAllList();
 		return shopList;
 	}
-	
-	
+
+	@Override
+	public Shop getShopInfoOne(int sNo) {
+		Shop shop = shopDAO.getShopInfoOne(sNo);
+		return shop;
+	}
 
 }

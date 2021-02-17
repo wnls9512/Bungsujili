@@ -5,14 +5,14 @@
 <!-- 한글 인코딩 처리  -->
 <fmt:requestEncoding value="utf-8"/>
 
+<style>
+tr {cursor:pointer;}
+</style>
+
 <jsp:include page="/WEB-INF/views/common/header2.jsp">
 	<jsp:param value="" name="pageTitle"/>
 </jsp:include>
-<script>
-function shopDetail(sNo){
-	location.href = "<c:url value='list/" + sNo + "'/>";	
-}
-</script>
+
 <section id="board-container" class="py-5">
 	<div class="text-center mb-5 text-light" id="board-title" style="height:250px; line-height:250px;">
 		<span class="fs-1 align-middle">🥨🥨 붕어빵 제보 목록 🥨🥨</span>
@@ -42,3 +42,9 @@ function shopDetail(sNo){
 </section>
 
 <jsp:include page="/WEB-INF/views/common/footer2.jsp"/>
+
+<script>
+function shopDetail(sNo){
+	location.href = "<c:url value='list/" + sNo + "'/>";	
+}
+</script>

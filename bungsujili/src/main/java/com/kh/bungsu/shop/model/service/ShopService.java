@@ -10,4 +10,6 @@ public interface ShopService {
 
 	List<Shop> getShopAllList();
 
+	Shop getShopInfoOne(int sNo);
+
 }

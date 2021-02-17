@@ -19,9 +19,9 @@
 		<table class="table mx-auto">
 			<thead>
 				<tr class="table-light">
-					<td class="px-4" align="center" width="60%"><strong>당동 붕어빵</strong></td>
-					<td align="right">붕어빵조아</td>
-					<td align="right" class="px-4">2021. 1. 29</td>
+					<td class="px-4" align="center" width="60%"><strong>${shop.sTitle }</strong></td>
+					<td align="right">${shop.memberId }</td>
+					<td align="right" class="px-4"><fmt:formatDate value="${shop.sDate }" pattern="yy/MM/dd HH:mm:ss"/></td>
 				</tr>
 			</thead>
 			
@@ -29,14 +29,14 @@
 				<tr>
 					<td colspan="3" align="center">
 						<div id="map" class="mb-2" style="width:100%;height:450px;"></div>
-						<span><strong>경기도 군포시</strong></span>
+						<span><strong>${shop.addr }</strong></span>
 					</td>
 				</tr>
 
 				<tr>
 					<td colspan="3">
 						<div class="my-5 py-2">
-							팥 붕어빵, 슈크림 붕어빵 있어요! 3개에 천 원!! 바삭바삭!!!
+							${shop.sContent }
 						</div>
 					</td>
 				</tr>
@@ -123,28 +123,34 @@
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f6d8fdaa58f0a1c4fb7cfa958eddc3fe&libraries=services"></script>
 <script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-mapOption = { 
-    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-    level: 3 // 지도의 확대 레벨
-};
+window.onload = function() {
 
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	let $lon = ${shop.lon};
+	let $lat = ${shop.lat};
+	
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 
-//마커가 표시될 위치입니다 
-var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
-
-//마커를 생성합니다
-var marker = new kakao.maps.Marker({
-position: markerPosition
-});
-
-//마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);
-
-//아래 코드는 지도 위의 마커를 제거하는 코드입니다
-//marker.setMap(null);    
-
+	mapOption = { 
+	    center: new kakao.maps.LatLng($lat, $lon), // 지도의 중심좌표
+	    level: 3 // 지도의 확대 레벨
+	};
+	
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+	
+	//마커가 표시될 위치입니다 
+	var markerPosition  = new kakao.maps.LatLng($lat, $lon); 
+	
+	//마커를 생성합니다
+	var marker = new kakao.maps.Marker({
+	position: markerPosition
+	});
+	
+	//마커가 지도 위에 표시되도록 설정합니다
+	marker.setMap(map);
+	
+	//아래 코드는 지도 위의 마커를 제거하는 코드입니다
+	//marker.setMap(null);    
+}
 </script>
 
 <jsp:include page="/WEB-INF/views/common/footer2.jsp"/>
