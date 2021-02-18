@@ -13,33 +13,55 @@ tr {cursor:pointer;}
 	<jsp:param value="" name="pageTitle"/>
 </jsp:include>
 
-<section id="board-container" class="py-5">
-	<div class="text-center mb-5 text-light" id="board-title" style="height:250px; line-height:250px;">
-		<span class="fs-1 align-middle">🥨🥨 붕어빵 제보 목록 🥨🥨</span>
-	</div>
-	<div class="mx-auto my-5 py-5">
-		<table class="table table-hover w-75 mx-auto">
-			<thead class="table-light border-top">
-				<tr>
-					<th>No</th>
-					<th>주소</th>
-					<th>제목</th>
-					<th>글쓴이</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${shopList}" var="item" varStatus="i">
-					<tr onclick="shopDetail('${item.sNo}')">
-						<th>${i.count }</th>
-						<td>${item.addr }</td>
-						<td>${item.sTitle }</td>
-						<td>${item.memberId }</td>
+	<section id="board-container" class="py-5">
+		<div class="text-center mb-5 text-light" id="board-title" style="height:250px; line-height:250px;">
+			<span class="fs-1 align-middle">🥨🥨 붕어빵 제보 목록 🥨🥨</span>
+		</div>
+		
+	<div class="container">
+		<div class="mx-auto my-5 py-5">
+		
+			<div class="row">
+				<div class="col col-2">				
+					<select class="form-control">
+					  <option selected disabled> -- 선택 --</option>
+					</select>
+				</div>
+				<div class="col col-3">				
+					<input class="form-control" type="text" 
+						   placeholder="검색어를 입력하세요">
+				</div>
+				<div class="col col-3">				
+					<button type="button" class="btn btn-primary">Primary</button>
+				</div>
+			</div>
+		
+		
+			<table class="table table-hover w-75 mx-auto">
+				<thead class="table-light border-top">
+					<tr>
+						<th>No</th>
+						<th>주소</th>
+						<th>제목</th>
+						<th>글쓴이</th>
 					</tr>
-				</c:forEach>
-			</tbody>		
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach items="${shopList}" var="item" varStatus="i">
+						<tr onclick="shopDetail('${item.sNo}')">
+							<th>${i.count }</th>
+							<td>${item.addr }</td>
+							<td>${item.sTitle }</td>
+							<td>${item.memberId }</td>
+						</tr>
+					</c:forEach>
+				</tbody>		
+			</table>
+		</div>
 	</div>
 </section>
+	
+	
 
 <jsp:include page="/WEB-INF/views/common/footer2.jsp"/>
 
