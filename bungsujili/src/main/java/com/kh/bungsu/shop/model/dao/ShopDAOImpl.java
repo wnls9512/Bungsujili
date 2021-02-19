@@ -1,6 +1,7 @@
 package com.kh.bungsu.shop.model.dao;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,4 +26,15 @@ public class ShopDAOImpl implements ShopDAO{
 	public int insertMenuMapping(HashMap<String, Object> param) {
 		return sqlSession.insert(namespace + ".insertMenuMapping", param);
 	}
+
+	@Override
+	public List<Shop> getShopAllList() {
+		return sqlSession.selectList(namespace + ".getShopAllList");
+	}
+
+	@Override
+	public Shop getShopInfoOne(int sNo) {
+		return sqlSession.selectOne(namespace + ".getShopInfoOne", sNo);
+	}
+	
 }
