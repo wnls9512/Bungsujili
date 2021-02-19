@@ -30,4 +30,11 @@
 	where s_no = #{sNo}
 </select>
 
+<select id="getShopMenu" resultType="_int">
+	select menu_no
+	from shop_mapping_menu
+	where s_no = #{sNo}
+</select>
+
+
 </mapper>

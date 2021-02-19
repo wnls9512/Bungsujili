@@ -33,7 +33,7 @@ public class ShopController {
 	@Autowired
 	private ShopService shopService;
 	
-	@RequestMapping("/")
+	@RequestMapping("")
 	public ModelAndView registerShop(ModelAndView mav) {
 		mav.setViewName("shop/shopRegistrationForm");
 		return mav;
@@ -65,8 +65,11 @@ public class ShopController {
 		log.debug("## shopDetail ");
 		log.debug("####################################");
 		
-		Shop shop = shopService.getShopInfoOne(sNo);
-		mav.addObject("shop", shop);
+		HashMap<String, Object> param = new HashMap<>();
+		param = shopService.getShopInfoOne(sNo);
+		
+		mav.addObject("menu", param.get("menu"));
+		mav.addObject("shop", param.get("shop"));
 		mav.setViewName("shop/shopDetail");
 		return mav;
 	}

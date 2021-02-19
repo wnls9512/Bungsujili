@@ -1,5 +1,6 @@
 package com.kh.bungsu.shop.model.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.kh.bungsu.shop.model.vo.Shop;
@@ -10,6 +11,6 @@ public interface ShopService {
 
 	List<Shop> getShopAllList();
 
-	Shop getShopInfoOne(int sNo);
+	HashMap<String, Object> getShopInfoOne(int sNo);
 
 }
