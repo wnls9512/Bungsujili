@@ -15,4 +15,6 @@ public interface ShopDAO {
 
 	Shop getShopInfoOne(int sNo);
 
+	List<Integer> getShopMenu(int sNo);
+
 }

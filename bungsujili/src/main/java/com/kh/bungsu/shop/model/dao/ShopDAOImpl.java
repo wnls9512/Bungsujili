@@ -36,5 +36,12 @@ public class ShopDAOImpl implements ShopDAO{
 	public Shop getShopInfoOne(int sNo) {
 		return sqlSession.selectOne(namespace + ".getShopInfoOne", sNo);
 	}
+
+	@Override
+	public List<Integer> getShopMenu(int sNo) {
+		return sqlSession.selectList(namespace + ".getShopMenu", sNo);
+	}
+	
+	
 	
 }

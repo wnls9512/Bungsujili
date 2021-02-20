@@ -32,6 +32,15 @@
 						<span><strong>${shop.addr }</strong></span>
 					</td>
 				</tr>
+				<tr>
+					<td colspan="3" align="center">
+						<span>
+							<c:forEach items="${ menu }" var="m">
+								<img src="${ pageContext.request.contextPath }/resources/img/logo/${ m }.png" width="50px" />
+							</c:forEach>
+						</span>
+					</td>
+				</tr>
 
 				<tr>
 					<td colspan="3">

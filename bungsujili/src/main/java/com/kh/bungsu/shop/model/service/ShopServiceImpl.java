@@ -1,5 +1,6 @@
 package com.kh.bungsu.shop.model.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -42,9 +43,20 @@ public class ShopServiceImpl implements ShopService{
 	}
 
 	@Override
-	public Shop getShopInfoOne(int sNo) {
+	public HashMap<String, Object> getShopInfoOne(int sNo) {
+		HashMap<String, Object> param = new HashMap<>();
+		
 		Shop shop = shopDAO.getShopInfoOne(sNo);
-		return shop;
+		List<Integer> menu = new ArrayList<>();
+		
+		if(shop != null) {
+			menu = shopDAO.getShopMenu(shop.getsNo());
+		}
+		
+		param.put("shop", shop);
+		param.put("menu", menu);
+		
+		return param;
 	}
 
 }
