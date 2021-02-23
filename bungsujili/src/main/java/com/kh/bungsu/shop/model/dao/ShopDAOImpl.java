@@ -7,6 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.kh.bungsu.shop.model.vo.Review;
 import com.kh.bungsu.shop.model.vo.Shop;
 
 @Repository
@@ -40,6 +41,16 @@ public class ShopDAOImpl implements ShopDAO{
 	@Override
 	public List<Integer> getShopMenu(int sNo) {
 		return sqlSession.selectList(namespace + ".getShopMenu", sNo);
+	}
+
+	@Override
+	public int insertReview(Review review) {
+		return sqlSession.insert(namespace + ".insertReview", review);
+	}
+
+	@Override
+	public List<Review> getShopReview(int sNo) {
+		return sqlSession.selectList(namespace + ".getShopReview", sNo);
 	}
 	
 	

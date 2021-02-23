@@ -3,6 +3,7 @@ package com.kh.bungsu.shop.model.service;
 import java.util.HashMap;
 import java.util.List;
 
+import com.kh.bungsu.shop.model.vo.Review;
 import com.kh.bungsu.shop.model.vo.Shop;
 
 public interface ShopService {
@@ -12,5 +13,7 @@ public interface ShopService {
 	List<Shop> getShopAllList();
 
 	HashMap<String, Object> getShopInfoOne(int sNo);
+
+	int insertReview(Review review);
 
 }

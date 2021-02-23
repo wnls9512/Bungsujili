@@ -36,5 +36,13 @@
 	where s_no = #{sNo}
 </select>
 
+<insert id="insertReview">
+	insert into review(s_no, member_id, r_content, r_score) 
+	values(#{sNo}, #{memberId}, #{rContent}, #{rScore})
+</insert>
+
+<select id="getShopReview" resultType="review">
+	select * from review where s_no = #{ sNo }
+</select>
 
 </mapper>
