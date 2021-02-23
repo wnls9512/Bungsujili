@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kh.bungsu.shop.model.dao.ShopDAO;
+import com.kh.bungsu.shop.model.vo.Review;
 import com.kh.bungsu.shop.model.vo.Shop;
 
 import lombok.extern.slf4j.Slf4j;
@@ -48,15 +49,26 @@ public class ShopServiceImpl implements ShopService{
 		
 		Shop shop = shopDAO.getShopInfoOne(sNo);
 		List<Integer> menu = new ArrayList<>();
+		List<Review> reviewList = new ArrayList<>();
 		
 		if(shop != null) {
 			menu = shopDAO.getShopMenu(shop.getsNo());
+			reviewList = shopDAO.getShopReview(shop.getsNo());
 		}
 		
 		param.put("shop", shop);
 		param.put("menu", menu);
+		param.put("review", reviewList);
 		
 		return param;
 	}
+
+	@Override
+	public int insertReview(Review review) {
+		return shopDAO.insertReview(review);
+	}
+	
+	
+	
 
 }

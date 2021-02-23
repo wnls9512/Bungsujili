@@ -160,13 +160,13 @@ $("#memberJoinFrm").submit(function(){
 	return true;
 });
 
-$('#authority2').on('click', function() {
+/* $('#authority2').on('click', function() {
 	$('#businessNo').attr('disabled', false);
 });
 $('#authority1').on('click', function() {
 	$('#businessNo').val('');
 	$('#businessNo').attr('disabled', true);
-});
+}); */
 
 </script>        
 <jsp:include page="/WEB-INF/views/common/footer2.jsp"></jsp:include>
